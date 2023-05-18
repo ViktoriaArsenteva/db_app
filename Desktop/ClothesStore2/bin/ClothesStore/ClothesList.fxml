@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="525.0" prefWidth="862.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClothesStore.ClothesListController">
+   <children>
+      <TableView fx:id="clothesTable" editable="true" prefHeight="497.0" prefWidth="905.0">
+         <columns>
+            <TableColumn fx:id="idCol" prefWidth="44.0" text="№" />
+            <TableColumn fx:id="vendorCodeCol" prefWidth="120.73752975463867" text="Артикул" />
+            <TableColumn fx:id="categoryCol" prefWidth="143.18438720703125" text="Категория" />
+            <TableColumn fx:id="nameCol" prefWidth="316.31561279296875" text="Наименование" />
+            <TableColumn fx:id="colorCol" prefWidth="85.0467529296875" text="Цвет" />
+            <TableColumn fx:id="sizeCol" prefWidth="62.2498779296875" text="Размер" />
+            <TableColumn fx:id="amountCol" prefWidth="90.0" text="Количество" />
+         </columns>
+      </TableView>
+      <GridPane prefHeight="17.0" prefWidth="862.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints />
+        </rowConstraints>
+         <children>
+            <Button fx:id="remove" mnemonicParsing="false" onAction="#removeItem" prefHeight="35.0" prefWidth="288.0" text="Удалить" GridPane.columnIndex="1" />
+            <Button fx:id="backBtn" mnemonicParsing="false" onAction="#comeBack" prefHeight="44.0" prefWidth="288.0" text="Вернуться назад" />
+         </children>
+      </GridPane>
+   </children>
+</VBox>
